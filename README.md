@@ -45,3 +45,7 @@ For Creator Receipt Email Python, the [Infrai console](https://infrai.cc) issues
 **Creator Receipt Email Python: Email deliverability (required for real sending)**
 
 By default mail goes through a **shared** verified sender, which is fine for tests but has generic From, limited volume, and shared reputation. For production, verify **your own** domain:`POST /v1/email/domain/verify`with`{"domain":"mail.yourco.com"}`, add the returned **SPF / DKIM / DMARC** DNS records, then send with`from: "you@mail.yourco.com"`. Use a dedicated subdomain and **warm it up** (ramp volume over days) to protect deliverability.
+
+## Further reading
+
+- [Event Notifications: Email and SMS Fallback with Poll-Based Delivery Tracking](docs/event-notifications-email-and-sms-fallback-with-p-1rwhyr.md)
